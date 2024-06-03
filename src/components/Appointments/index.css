@@ -1,0 +1,110 @@
+/* Write your CSS here */
+.bg-container {
+  background-image: linear-gradient(to bottom, #fbc7d4, #9796f0);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+.row-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  margin-right: 30px;
+  flex-grow: 3;
+}
+.appointment-container {
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+.heading {
+  color: #171f46;
+  font-family: 'roboto';
+  font-weight: 500;
+  font-size: 22px;
+}
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+.labels {
+  font-family: 'roboto';
+  color: #b5b7c4;
+  font-size: 12px;
+  margin: 0px;
+}
+.inputs {
+  border-radius: 5px;
+  outline: none;
+  border-color: #b5b7c4;
+  border-style: solid;
+  border-width: 2px;
+  padding: 5px;
+  margin: 0px;
+}
+
+.add-btn {
+  background-color: #8b5cf6;
+  color: #ffffff;
+  font-family: 'roboto';
+  width: 5vw;
+  border-radius: 7px;
+  border: none;
+  padding: 5px;
+  margin: 0px;
+}
+.for-lable-inputs {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+.img {
+  height: 50vh;
+  width: 25vw;
+  margin-left: 30px;
+  flex-grow: 2;
+}
+.seperator {
+  border-width: 1px;
+  border-color: #b5b7c4;
+  border-style: solid;
+  margin-top: 20px;
+}
+.nxt-container {
+  display: flex;
+  justify-content: space-between;
+}
+.appointments-added-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-around;
+  align-items: space-around;
+}
+.appointments-heading {
+  font-family: 'Roboto';
+  color: #171f46;
+  font-weight: 500;
+  font-size: 22px;
+}
+.starred-btn {
+  background-color: transparent;
+  outline: none;
+  border-radius: 50px;
+  border-color: #9897f0;
+  color: #9897f0;
+  border-style: solid;
+  font-family: 'roboto';
+  width: 7vw;
+  margin-top: 15px;
+  height: 5vh;
+}
+.added-appointment-container {
+  display: flex;
+  flex-wrap: wrap;
+}
