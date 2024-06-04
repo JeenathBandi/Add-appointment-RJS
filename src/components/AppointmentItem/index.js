@@ -12,20 +12,20 @@ const AppointmentItem = props => {
   const clickOnStarred = () => toToggleIsStarred(id)
 
   return (
-    <div className="appointment-item-container">
+    <li className="appointment-item-container">
       <div className="name-starred-container">
         <p className="name-heading">{name}</p>
-        <button type="button" className="star-btn">
+        <button type="button" className="star-btn" data-testid="star">
           <img
             src={isStarImg}
-            alt="starred"
+            alt="star"
             className="star-img"
             onClick={clickOnStarred}
           />
         </button>
       </div>
       <p className="date-text">{date}</p>
-    </div>
+    </li>
   )
 }
 export default AppointmentItem

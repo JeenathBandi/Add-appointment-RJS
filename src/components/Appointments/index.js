@@ -44,16 +44,11 @@ class Appointments extends Component {
     this.setState(prevState => ({clickStarred: !prevState.clickStarred}))
   }
 
-  getStarredItems = () => {
-    const {componentList,clickStarred} = this.state
+  render() {
+    const {name, date, componentList, clickStarred} = this.state
     const filteredResults = componentList.filter(
       each => each.isStarred === true,
     )
-    this.setState({componentList: filteredResults})
-  }
-
-  render() {
-    const {name, date, componentList, clickStarred} = this.state
 
     return (
       <div className="bg-container">
@@ -110,15 +105,23 @@ class Appointments extends Component {
               Starred
             </button>
           </div>
-          <div className="added-appointment-container">
-            {componentList.map(each => (
-              <AppointmentItem
-                componentList={each}
-                key={each.id}
-                toToggleIsStarred={this.toToggleIsStarred}
-              />
-            ))}
-          </div>
+          <ul className="added-appointment-container">
+            {clickStarred
+              ? filteredResults.map(each => (
+                  <AppointmentItem
+                    componentList={each}
+                    key={each.id}
+                    toToggleIsStarred={this.toToggleIsStarred}
+                  />
+                ))
+              : componentList.map(each => (
+                  <AppointmentItem
+                    componentList={each}
+                    key={each.id}
+                    toToggleIsStarred={this.toToggleIsStarred}
+                  />
+                ))}
+          </ul>
         </div>
       </div>
     )
