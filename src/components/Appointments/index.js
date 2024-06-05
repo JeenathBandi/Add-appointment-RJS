@@ -19,7 +19,7 @@ class Appointments extends Component {
     const newItem = {
       id: uuidv4(),
       name,
-      date:format(new Date(date), 'dd MMMM yyyy, EEEE')
+      date:format(new Date(date), 'dd MMMM yyyy, EEEE'),
       isStarred: false,
     }
     this.setState(prevState => ({
