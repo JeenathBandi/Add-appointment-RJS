@@ -2,7 +2,7 @@
 import './index.css'
 
 const AppointmentItem = props => {
-  const {componentList, toToggleIsStarred} = props
+  const {componentList, toToggleIsStarred} = props    
   const {id, name, date, isStarred} = componentList
 
   const isStarImg = isStarred
@@ -15,12 +15,12 @@ const AppointmentItem = props => {
     <li className="appointment-item-container">
       <div className="name-starred-container">
         <p className="name-heading">{name}</p>
-        <button type="button" className="star-btn" data-testid="star">
+        <button type="button" className="star-btn" data-testid="star" onClick={clickOnStarred}>
           <img
             src={isStarImg}
             alt="star"
             className="star-img"
-            onClick={clickOnStarred}
+            
           />
         </button>
       </div>
